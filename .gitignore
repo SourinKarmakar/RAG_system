@@ -1,0 +1,38 @@
+
+
+# Python-specific ignores
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# FastAPI and Uvicorn specific
+.uvicorn_reload_watcher.json # Uvicorn's reload watcher file
+
+# Editor and IDE specific
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store # macOS specific
+
+# Environment variables
+.env
+.flaskenv
+
+# Database files (if applicable)
+*.sqlite3
+*.db
+
+# Log files
+*.log

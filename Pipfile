@@ -1,0 +1,28 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+fastapi = "*"
+uvicorn = "*"
+langchain = "*"
+openai = "*"
+redis = "*"
+numpy = "*"
+aiofiles = "*"
+pypdf = "*"
+python-docx = "*"
+python-multipart = "*"
+pdfplumber = "*"
+rank-bm25 = "*"
+faiss-cpu = "*"
+scikit-learn = "*"
+sentence-transformers = "*"
+pymupdf = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.11"
+python_full_version = "3.11.0"
