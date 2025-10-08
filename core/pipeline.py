@@ -15,7 +15,6 @@ class ChunkerPipeline:
 
 
     def ingest_file(self, file_path):
-        # BaseProcessor returns already-chunked sections: list of dicts
         chunks = self.processor.process_file(file_path)
         texts = [c["content"] for c in chunks]
         embeddings = self.embed_mgr.embed_texts(texts)

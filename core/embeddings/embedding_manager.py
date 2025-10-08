@@ -6,7 +6,7 @@ from .openai_embeddings import OpenAIEmbeddings
 
 class EmbeddingManager:
 
-    def __init__(self, provider: str = "local", model_name: str = None):
+    def __init__(self, provider = "local", model_name = None):
         provider = provider.lower().strip()
 
         if provider == "openai":

@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "512f4c77cd6789608ac3cb491e628701482512f153d5a7d0117ac70b00806680"
+            "sha256": "c799a27f6443b2566160d47a4b2e757c064f3286b446e263d5b42fb8d224f28a"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -381,12 +381,12 @@
         },
         "fastapi": {
             "hashes": [
-                "sha256:5e81654d98c4d2f53790a7d32d25a7353b30c81441be7d0958a26b5d761fa1c8",
-                "sha256:705137a61e2ef71019d2445b123aa8845bd97273c395b744d5a7dfe559056855"
+                "sha256:d1f842612e6a305f95abe784b7f8d3215477742e7c67a16fccd20bd79db68150",
+                "sha256:d5388dbe76d97cb6ccd2c93b4dd981608062ebf6335280edfa9a11af82443e18"
             ],
             "index": "pypi",
             "markers": "python_version >= '3.8'",
-            "version": "==0.118.0"
+            "version": "==0.118.2"
         },
         "filelock": {
             "hashes": [
@@ -647,11 +647,11 @@
         },
         "langsmith": {
             "hashes": [
-                "sha256:5c4dcaa5049360bd126fec2fd59af703294e08c75c8d5363261f71a941fa2963",
-                "sha256:a90bb8297fe0d3c63d9868ea58fe46c52d7e2d1f06b614e43c6a78c948275f24"
+                "sha256:41d474f744617c79d61791a855ce2cf57294955ce8376c150484f9520700a7e5",
+                "sha256:a8deb12bd332b816ee1896a8003c252882c92f27a3ee9a623ce821f49d1d13f4"
             ],
             "markers": "python_version >= '3.9'",
-            "version": "==0.4.32"
+            "version": "==0.4.33"
         },
         "lxml": {
             "hashes": [
@@ -1411,6 +1411,15 @@
             "index": "pypi",
             "markers": "python_version >= '3.9'",
             "version": "==1.2.0"
+        },
+        "python-dotenv": {
+            "hashes": [
+                "sha256:31f23644fe2602f88ff55e1f5c79ba497e01224ee7737937930c448e4d0e24dc",
+                "sha256:a8a6399716257f45be6a007360200409fce5cda2661e3dec71d23dc15f6189ab"
+            ],
+            "index": "pypi",
+            "markers": "python_version >= '3.9'",
+            "version": "==1.1.1"
         },
         "python-multipart": {
             "hashes": [

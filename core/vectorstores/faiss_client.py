@@ -2,7 +2,6 @@
 import os
 import faiss
 import numpy as np
-from typing import List, Dict
 from sklearn.preprocessing import normalize
 
 class FAISSManager:

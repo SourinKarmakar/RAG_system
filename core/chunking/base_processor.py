@@ -15,13 +15,6 @@ class BaseProcessor:
 
 
     def normalize_blocks(self, blocks):
-        """
-        Ensure all incoming data follows a uniform structure:
-        [
-        {"heading": str, "content": str, "type": "text"|"table"|"list"},
-        ...
-        ]
-        """
         normalized = []
         for b in blocks:
             normalized.append({
@@ -33,14 +26,10 @@ class BaseProcessor:
 
 
     def sentence_splitter(self, text):
-        """Split text by sentence endings while keeping punctuation."""
         return re.split(r'(?<=[.!?])\s+', text.strip())
 
 
     def chunk_block(self, block, max_words = 150, overlap = 50):
-        """
-        Chunk a single block of text (or keep table/list intact).
-        """
         if block["type"] != "text":
             # Non-text content (e.g., table) should be kept as-is
             return [block]
@@ -77,9 +66,6 @@ class BaseProcessor:
 
 
     def merge_small_chunks(self, chunks, min_words = 50):
-        """
-        Merge chunks that are too small with their neighbors.
-        """
         merged = []
         buffer = None
 
@@ -94,9 +80,6 @@ class BaseProcessor:
 
 
     def unified_context_chunker(self, blocks, max_words = 150, overlap = 50):
-        """
-        Core unified algorithm for grouping headers and chunking across formats.
-        """
         normalized = self.normalize_blocks(blocks)
         all_chunks = []
 
@@ -115,10 +98,6 @@ class BaseProcessor:
     
     
     def process_file(self, file_path):
-        """
-        Detect file type and process using the corresponding processor.
-        Returns: List of {heading, content, type} dicts.
-        """
         file_type = self._detect_file_type(file_path)
 
         if file_type not in self.processors:
