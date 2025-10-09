@@ -8,7 +8,6 @@ class LocalEmbeddings:
 
 
     def embed_texts(self, texts, show_progress=False):
-        """Generate embeddings for a list of texts."""
         embeddings = self.model.encode(
             texts,
             show_progress_bar=show_progress,
@@ -19,5 +18,4 @@ class LocalEmbeddings:
 
 
     def embed_query(self, query):
-        """Generate embedding for a single query."""
         return self.model.encode([query], convert_to_numpy=True, normalize_embeddings=True)

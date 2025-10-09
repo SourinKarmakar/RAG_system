@@ -21,6 +21,7 @@ scikit-learn = "*"
 sentence-transformers = "*"
 pymupdf = "*"
 python-dotenv = "*"
+nest-asyncio = "*"
 
 [dev-packages]
 

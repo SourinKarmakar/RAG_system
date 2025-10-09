@@ -15,6 +15,7 @@ dist/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+volumes/
 
 # FastAPI and Uvicorn specific
 .uvicorn_reload_watcher.json # Uvicorn's reload watcher file

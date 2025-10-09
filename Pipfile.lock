@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "c799a27f6443b2566160d47a4b2e757c064f3286b446e263d5b42fb8d224f28a"
+            "sha256": "93e7bf7ae5d2ad98ff3a6e9ac135197eda3ca3db580723e6244da55031808ac6"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -390,11 +390,11 @@
         },
         "filelock": {
             "hashes": [
-                "sha256:66eda1888b0171c998b35be2bcc0f6d75c388a7ce20c3f3f37aa8e96c2dddf58",
-                "sha256:d38e30481def20772f5baf097c122c3babc4fcdb7e14e57049eb9d88c6dc017d"
+                "sha256:339b4732ffda5cd79b13f4e2711a31b0365ce445d95d243bb996273d072546a2",
+                "sha256:711e943b4ec6be42e1d4e6690b48dc175c822967466bb31c0c293f34334c13f4"
             ],
-            "markers": "python_version >= '3.9'",
-            "version": "==3.19.1"
+            "markers": "python_version >= '3.10'",
+            "version": "==3.20.0"
         },
         "fsspec": {
             "hashes": [
@@ -900,6 +900,15 @@
                 "sha256:a0b2b9fe80bbcd81a6647ff13108738cfb482d481d826cc0e02f5b35e5c88d2c"
             ],
             "version": "==1.3.0"
+        },
+        "nest-asyncio": {
+            "hashes": [
+                "sha256:6f172d5449aca15afd6c646851f4e31e02c598d553a667e38cafa997cfec55fe",
+                "sha256:87af6efd6b5e897c81050477ef65c62e2b2f35d51703cae01aff2905b1852e1c"
+            ],
+            "index": "pypi",
+            "markers": "python_version >= '3.5'",
+            "version": "==1.6.0"
         },
         "networkx": {
             "hashes": [

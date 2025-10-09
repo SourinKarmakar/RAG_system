@@ -1,9 +1,10 @@
-# pipeline/chunker_pipeline.py
-from typing import List, Dict
 from core.embeddings.embedding_manager import EmbeddingManager
 from core.vectorstores.faiss_client import FAISSManager
 from core.retriever.bm_25_client import BM25Manager
 from core.chunking.base_processor import BaseProcessor
+from config.settings import (
+    INDEX_PERSISTENCE_STORAGE_PATH,
+)
 import os
 
 class ChunkerPipeline:
@@ -38,7 +39,6 @@ class ChunkerPipeline:
         Deep flow: FAISS retrieve faiss_k -> BM25 rerank on those candidates -> return top rerank_k
         alpha: weight for FAISS score (0..1), (1-alpha) for BM25
         """
-        # Stage1: dense candidates
         qvec = self.embed_mgr.embed_query(q)
         dense = self.faiss.index.search(qvec.astype("float32"), faiss_k)
         D, I = dense  # squared similarities (IP since normalized)
@@ -61,11 +61,11 @@ class ChunkerPipeline:
         return merged_sorted
 
 
-    def save(self, dir_path="vectorstore"):
+    def save(self, dir_path=INDEX_PERSISTENCE_STORAGE_PATH):
         self.faiss.save(dir_path)
         self.bm25.save(os.path.join(dir_path, "bm25.pkl"))
 
 
-    def load(self, dir_path="vectorstore"):
+    def load(self, dir_path=INDEX_PERSISTENCE_STORAGE_PATH):
         self.faiss.load(dir_path)
         self.bm25.load(os.path.join(dir_path, "bm25.pkl"))

@@ -1,4 +1,3 @@
-# vectorstores/faiss_manager.py
 import os
 import faiss
 import numpy as np
@@ -50,7 +49,7 @@ class FAISSManager:
         return results
 
 
-    def save(self, dir_path = "vectorstore"):
+    def save(self, dir_path = "volumes/indexes"):
         os.makedirs(dir_path, exist_ok=True)
         if self.index is None:
             raise RuntimeError("No index to save")
@@ -59,7 +58,7 @@ class FAISSManager:
         return dir_path
 
 
-    def load(self, dir_path = "vector_store"):
+    def load(self, dir_path = "volumes/indexes"):
         idx_path = os.path.join(dir_path, "faiss.index")
         meta_path = os.path.join(dir_path, "metadata.npy")
         if not os.path.exists(idx_path) or not os.path.exists(meta_path):
